@@ -22,3 +22,57 @@ function search_regio() {
 		}
 	}
 }
+
+var winddirection = document.getElementsByClassName('winddirection');
+var arrow = document.getElementsByClassName('windr');
+
+for (i = 0; i < winddirection.length; i++) {
+	console.log(winddirection[i].innerHTML);
+	switch (winddirection[i].innerHTML){
+		case 'NNW':
+			arrow[i].className += ' nnw';
+			break;
+		case 'NW':
+			arrow[i].className += ' nw';
+			break;
+		case 'WNW':
+			arrow[i].className += ' wnw';
+			break;
+		case 'W':
+			arrow[i].className += ' w';
+			break;
+		case 'WZW':
+			arrow[i].className += ' wzw';
+			break;
+		case 'ZW':
+			arrow[i].className += ' zw';
+			break;
+		case 'ZZW':
+			arrow[i].className += ' zw';
+			break;	
+		case 'Z':
+			arrow[i].className += ' z';
+			break;
+		case 'ZZO':
+			arrow[i].className += ' zzo';
+			break;
+		case 'ZO':
+			arrow[i].className += ' zo';
+			break;
+		case 'OZO':
+			arrow[i].className += ' ozo';
+			break;
+		case 'O':
+			arrow[i].className += ' o';
+			break;
+		case 'ONO':
+			arrow[i].className += ' ono';
+			break;
+		case 'NO':
+			arrow[i].className += ' no';
+			break;
+		case 'NNO':
+			arrow[i].className += ' no';
+			break;
+	}
+}

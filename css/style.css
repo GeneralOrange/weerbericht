@@ -22,6 +22,7 @@ input {
 
 #none_found {
 	color: red;
+	display: none;
 }
 
 .container {
@@ -53,6 +54,75 @@ input {
 	float: left;
 	width: 170px;
 }
+
+.windr {
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+/* winddirections */
+
+.nnw {
+	transform: rotate(337.5deg);
+}
+
+.nw {
+	transform: rotate(315deg);
+}
+
+.wnw {
+	transform: rotate(292.5deg);
+}
+
+.w {
+	transform: rotate(270deg);
+}
+
+.wzw {
+	transform: rotate(247.5deg);
+}
+
+.zw {
+	transform: rotate(225deg);
+}
+
+.zzw {
+	transform: rotate(202.5deg);
+}
+
+.z {
+	transform: rotate(180deg);
+}
+
+.zzo {
+	transform: rotate(157.5deg);
+}
+
+.zo {
+	transform: rotate(135deg);
+}
+
+.ozo {
+	transform: rotate(112.5deg);
+}
+
+.o {
+	transform: rotate(90deg);
+}
+
+.ono {
+	transform: rotate(67.5deg);
+}
+
+.no {
+	transform: rotate(45deg);
+}
+
+.nno {
+	transform: rotate(22.5deg);
+}
+
+/* ---- */
 
 .info {
 	text-align: left;

@@ -21,8 +21,9 @@ $data = json_decode($data, true);
  					<tr><th>Tijd gemeten:</th><td><?= $station['timestamp'];?></td></tr>
  					<tr><th>Temperatuur:</th><td><?= $station['temperature'];?></td></tr>
  					<tr><th>Windkracht:</th><td><?= $station['windspeed'];?></td></tr>
- 					<tr><th>Windkant:</th><td><?= $station['winddirection'];?></td></tr>
- 				</table>		
+ 					<tr><th>Windrichting:</th><td class="winddirection"><?= $station['winddirection'];?></td></tr>
+ 				</table>
+ 				<i class="windr fas fa-arrow-alt-circle-up"></i>		
  			</div>
  		</div>
  <?php
