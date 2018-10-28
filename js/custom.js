@@ -1,33 +1,37 @@
 function search_regio() {
-	var input, filter, regios, station, h3, i, d;
+	var input, filter, regios, station, h3, i, d, found;
 	input = document.getElementById('search_field');
 	filter = input.value.toUpperCase();
 	regios = document.getElementById('regios');
 	station = document.getElementsByClassName('station');
 	d = 0;
-	none_found = document.getElementById('none_found');
+	found = document.getElementById('found');
 
-	for (i = 0; i < station.length; i++) {
-		h3 = station[i].getElementsByTagName('h3')[0];
-		if (h3.innerHTML.toUpperCase().indexOf(filter) > -1) {
-			station[i].style.display = '';
-		} else {
-			station[i].style.display = 'none';
-			d++;
-			if (d === station.length) {
-				none_found.style.display = 'block';
+	if (filter !== '' || filter !== null){
+		for (i = 0; i < station.length; i++) {
+			h3 = station[i].getElementsByTagName('h3')[0];
+			if (h3.innerHTML.toUpperCase().indexOf(filter) > -1) {
+				station[i].style.display = '';
+				d++;
 			} else {
-				none_found.style.display = 'none';
+				station[i].style.display = 'none';
 			}
 		}
-	}
+		if (d < 1){
+			found.style.color = 'red';
+			found.innerHTML = 'Geen Regio\'s gevonden op uw criteria';
+		} else {
+			found.style.color = 'white';
+			found.innerHTML = d+' Regio(\'s) gevonden op uw criteria';
+		}
+	} 
 }
 
 var winddirection = document.getElementsByClassName('winddirection');
 var arrow = document.getElementsByClassName('windr');
 
 for (i = 0; i < winddirection.length; i++) {
-	console.log(winddirection[i].innerHTML);
+
 	switch (winddirection[i].innerHTML){
 		case 'NNW':
 			arrow[i].className += ' nnw';
@@ -72,7 +76,15 @@ for (i = 0; i < winddirection.length; i++) {
 			arrow[i].className += ' no';
 			break;
 		case 'NNO':
-			arrow[i].className += ' no';
+			arrow[i].className += ' nno';
 			break;
 	}
+}
+
+var input = document.getElementById('search_field');
+var station = document.getElementsByClassName('station');
+var found = document.getElementById('found');
+
+if (input.value === '' || input.value === null){
+	found.innerHTML = station.length+' Regio(\'s) gevonden';
 }

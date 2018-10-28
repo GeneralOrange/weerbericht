@@ -8,12 +8,12 @@ $data = json_decode($data, true);
 </div>
 <div id="regios">
 <?php
- 	foreach($data['actual']['stationmeasurements'] as $station) { ?>
+ 	foreach($data['actual']['stationmeasurements'] as $station): ?>
  		<div class="station">
  			<h3><?= $station['regio']; ?></h3>
  			<div class="weather">
  				<img src="<?= $station['iconurl']; ?>">
- 				<p><?= $station['weatherdescription']; ?></p>
+				<p><?= $station['weatherdescription']; ?></p>
  			</div>
  			<div class="info">
  				<table>
@@ -27,6 +27,6 @@ $data = json_decode($data, true);
  			</div>
  		</div>
  <?php
-	}
+	endforeach;
 ?>
 </div>
